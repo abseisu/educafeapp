@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+    <head>
+        <link rel="stylesheet" href="static/stylesheets/profform.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>EduMeet post form</title>
+
+        <script src="https://kit.fontawesome.com/ff88bfeb8a.js" crossorigin="anonymous"></script>
+
+        
+
+    </head>
+
+    <body>
+        <div class="registration-form">
+        <header>
+            <h1>Post an EduMeet</h1>
+            <p>Give us the specifications of your EduMeet</p>
+            <p> <br> 1) Date and time of EduMeet
+                <br><br> 2) Location of your EduMeet (Example: "Saybrook Dining Hall")
+                <br><br> 3) How many students do you want to meet? (maximum)
+                <br><br> 4) Is there a topic you would like the EduMeet to center on? (Examples: "Russia-Ukraine", "None")
+            </p>
+        </header>
+        <form action = "/prof_post" method = "POST" name="post" id = "post">
+            <div class="input-section datetime-section">
+                <input name = "date" id = "date" class="datetime" type="datetime-local" placeholder="When do you want to host the EduMeet?" autocomplete="off"/>
+                <div class="animated-button"><span class="icon-paper-plane"><i class="fa-regular fa-calendar"></i></span><span class="next-button datetime"><i class="fa fa-arrow-up"></i></span></div>
+            </div>
+            <div class="input-section location-section folded">
+            <input name = "location" id = "location" class="location" type="text" placeholder="Location of EduMeet (Example: 'Saybrook Dining Hall')">
+            <div class="animated-button"><span class="icon-lock"><i class="fa-solid fa-location-pin"></i></i></span><span class="next-button location"><i class="fa fa-arrow-up"></i></span></div>
+            </div>
+            <div class="input-section capacity-section folded">
+                <input name = "capacity" date = "capacity" class="capacity" type="number" min="1" placeholder="Number of student participants (maximum capacity)"/>
+                <div class="animated-button"><span class="icon-repeat-lock"><i class="fa-solid fa-people-group"></i></span><span class="next-button capacity"><i class="fa fa-arrow-up"></i></span></div>
+            </div>  
+            <div class="input-section topic-section folded">
+                <input name = "topic" id = "topic" class="topic" type="text" placeholder="Topic of Discussion (Examples: 'Russia-Ukraine', 'None')"/>
+                <div class="animated-button"><span class="icon-comm"><i class="fa-solid fa-comments"></i></span><span class="next-button topic"><i class="fa fa-paper-plane"></i></span></div>
+            </div>  
+            <div class="success"> 
+                <p><a onclick="submitForm()" class = "white">Click to REVIEW and POST your EduMeet!</a></p>
+            </div>
+        </form>
+        </div>
+
+        <script src="static/js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/profform.js"></script>
+        <script>
+            function submitForm() {
+                document.getElementById("post").submit();
+            }
+        </script>
+
+
+    </body>
+<html>

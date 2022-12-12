@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCafé - Roundtables With Your Professors</title>
+    <link rel="stylesheet" type="text/css" href="static/stylesheets/jSwipes.css">
+    <link rel="stylesheet" href="/static/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/all.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/animate.css">
+    <link rel="stylesheet" href="/static/stylesheets/flaticon.css">
+    <link rel="stylesheet" href="/static/stylesheets/magnific-popup.css">
+    <link rel="stylesheet" href="/static/stylesheets/odometer.css">
+    <link rel="stylesheet" href="/static/stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/nice-select.css">
+    <link rel="stylesheet" href="/static/stylesheets/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="/static/stylesheets/main.css">
+    <link rel="stylesheet" href="/static/stylesheets/responsive.css">
+    <link rel="stylesheet" href="/static/stylesheets/post-sum.css">
+    <!-- <link rel="stylesheet" href="assets/css/dark.css"> -->
+
+    <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+
+</head>
+<body style="text-align:center; background-color: #001128">
+    <!-- ==========Header-Section========== -->
+    <!-- ==========Header-Section========== -->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/swipes">
+                        <img src="/static/images/logo/logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="/swipes" class="active">New EduMeets</a>
+                    </li>
+                    <li>
+                        <a href="/all_edumeets">All EduMeets</a>
+                    </li>
+                    <li>
+                        <a href="/my_edumeets">My EduMeets</a>
+                    </li>
+                    <li class="separator">
+                        <span>|</span>
+                    </li>
+                    <li class="user-profile">
+                        <a href="#">
+                            <img src="/static/images/user-demo.png" alt="">
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/student_profile">Profile</a>
+                            </li>
+                            <li>
+                                <a href="/">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="search-overlay">
+        <div class="close"><i class="fas fa-times"></i></div>
+        <form action="#">
+            <input type="text" placeholder="Write what you want..">
+        </form>
+    </div>
+    <!-- ==========Header-Section========== -->
+
+    <!-- start padding container -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="font-size:30px;color: white;line-height: 1.3;">Swipe right to sign up!<br>
+        Swipe left to pass.
+    </div>
+    {% for i in range(edumeets | length) %} 
+    <div class="wrap">
+        <!-- start jtinder container -->
+        <div id="tinderslide">
+            <ul>
+
+                    <li class="pane1" overflow="hidden">
+                        <div class="kontejner">
+            
+                            <div class="photo wow fadeInLeft">
+                                <div class="photo-2">
+                                    <img src={{ profphotos[i] }} width="100%" height="auto" border-radius="5% 25%" overflow="hidden">
+                                </div> 
+                            </div>
+                            <div class="posting wow fadeInRight">
+                                <p>
+                                    <h1 class="main-title" style="font-size:large"> 
+                                        EduMeet with Professor {{ profs[i] }}
+                                    </h1>
+                                </p>    
+                                <p>
+                                    <h1 class="main-title" style="font-size:medium"> 
+                                        Location of EduMeet:
+                                    </h1> 
+                                    {{ edumeets[edumeet_result[i]][2] }}
+                                </p>          
+                                <p>
+                                    <h1 class="main-title" style="font-size:medium"> 
+                                        Date of EduMeet
+                                    </h1> 
+                                    {{ edumeets[edumeet_result[i]][3] }}
+                                </p>
+                                <p>
+                                    <h1 class="main-title" style="font-size:medium"> 
+                                        Topic of EduMeet:
+                                    </h1> 
+                                    {{ edumeets[edumeet_result[i]][4] }}
+                                </p>
+                                <p>
+                                    <h1 class="main-title" style="font-size:medium"> 
+                                        {{ profs[i] }}'s bio:
+                                    </h1>
+                                    {{ profbios[i] }}
+                                </p>
+            
+                            </div> 
+                            <div>
+    
+
+                                <br>
+                            </div>
+                        </div>
+                    </li>
+
+            </ul>
+        </div>
+        <!-- end jtinder container -->
+    </div>
+    <!-- end padding container -->
+
+    <!-- jTinder trigger by buttons  -->
+    <div class="actions">
+        <div class="actions">
+        <form name = "swipe_left"  id = "swipe_left" action="/swipe_left" method = "POST">
+            <input hidden name = "edumeet_id" id = "edumeet_id" value = {{ edumeets[edumeet_result[i]][0] }}>
+            <input hidden name = "counter" id = "counter" value = {{ i|string }}>
+            <button disabled hidden  type = "submit" class="custom-button"><i></i></button>
+        </form>
+        <form name = "swipe_right" id = "swipe_right" action="/swipe_right" method = "POST">
+            <input hidden  name = "edumeet_id" id = "edumeet_id" value = {{ edumeets[edumeet_result[i]][0] }}>
+            <input hidden name = "counter" id = "counter" value = {{ i|string }} >
+            <button disabled hidden  type = "submit" class="custom-button"><i></i></button>
+        </form>
+    </div>
+    {% endfor %}
+
+    <!-- jTinder status text  -->
+    <div id="status"></div>
+
+    <!-- jQuery lib -->
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <!-- transform2d lib -->
+    <script type="text/javascript" src="static/js/jquery.transform2d.js"></script>
+    <!-- jTinder lib -->
+    <script type="text/javascript" src="static/js/jquery.jTinder.js"></script>
+    <!-- jTinder initialization script -->
+    <script type="text/javascript" src="static/js/mainswipe.js"></script>
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/modernizr-3.6.0.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/heandline.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/countdown.min.js"></script>
+    <script src="static/js/odometer.min.js"></script>
+    <script src="static/js/viewport.jquery.js"></script>
+    <script src="static/js/nice-select.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

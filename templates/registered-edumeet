@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/static/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/all.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/animate.css">
+    <link rel="stylesheet" href="/static/stylesheets/flaticon.css">
+    <link rel="stylesheet" href="/static/stylesheets/magnific-popup.css">
+    <link rel="stylesheet" href="/static/stylesheets/odometer.css">
+    <link rel="stylesheet" href="/static/stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/nice-select.css">
+    <link rel="stylesheet" href="/static/stylesheets/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="/static/stylesheets/main.css">
+    <link rel="stylesheet" href="/static/stylesheets/responsive.css">
+    <link rel="stylesheet" href="/static/stylesheets/post-sum.css">
+    <!-- <link rel="stylesheet" href="assets/css/dark.css"> -->
+
+    <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+
+    <title>EduCafe - Roundtables with your professors</title>
+
+
+</head>
+
+<body style="text-align:center; background-color: #001128">
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+   
+    <section class="logo">
+        <br>
+        <img src="/static/images/logo/logo.png" alt="logo" width="350px">
+    </section>
+    <div class="kontejner">
+            <div class="photo wow fadeInLeft">
+                <div class="photo-2">
+                    <img src= {{ profile }} width="100%" height="100%" border-radius="5% 25%" overflow="hidden">
+                </div> 
+            </div>
+            <div class="posting wow fadeInRight">
+                <p>
+                    <h1 class="main-title" style="font-size:large"> 
+                        EduMeet with Professor {{ name }}
+                    </h1>
+                </p>    
+                <p>
+                    <h1 class="main-title" style="font-size:medium"> 
+                        Location of EduMeet:
+                    </h1> 
+                    {{ location }}
+                </p>          
+                <p>
+                    <h1 class="main-title" style="font-size:medium"> 
+                        Date of EduMeet
+                    </h1> 
+                    {{ date }}
+                </p>
+                <p>
+                    <h1 class="main-title" style="font-size:medium"> 
+                        Topic of EduMeet:
+                    </h1> 
+                    {{ topic }}
+                </p>
+                <p>
+                    <h1 class="main-title" style="font-size:medium"> 
+                        {{ name }}'s bio:
+                    </h1>
+                    {{ bio }}
+                </p>
+            </div> 
+            <div class="button wow fadeInRight">
+                <div class="join-now-box">
+                    <div class="joun-button">
+                        <button disabled type = "submit" value = {{ id }} name = "edumeet_id" class="custom-button">ALREADY REGISTED!</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/modernizr-3.6.0.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/heandline.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/countdown.min.js"></script>
+    <script src="static/js/odometer.min.js"></script>
+    <script src="static/js/viewport.jquery.js"></script>
+    <script src="static/js/nice-select.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

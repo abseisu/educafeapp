@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="static/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="static/stylesheets/all.min.css">
+    <link rel="stylesheet" href="static/stylesheets/animate.css">
+    <link rel="stylesheet" href="static/stylesheets/flaticon.css">
+    <link rel="stylesheet" href="static/stylesheets/magnific-popup.css">
+    <link rel="stylesheet" href="static/stylesheets/odometer.css">
+    <link rel="stylesheet" href="static/stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/stylesheets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/stylesheets/nice-select.css">
+    <link rel="stylesheet" href="static/stylesheets/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="static/stylesheets/main.css">
+    <link rel="stylesheet" href="static/stylesheets/responsive.css">
+
+    <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+
+    <title>EduCafé - our slogan</title>
+    <style>
+        .boxing {
+            height: 60px;
+            padding: 0px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .custom-button2 {
+            display: inline-block;
+            padding: 11px 35px;
+            color:black;
+            font-weight: 600;
+            width: auto;
+            border-radius: 50px;
+            margin-left: 20px;
+            height: auto;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+<header class="header-section">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./static/images/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-bar d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- ==========Header-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-5" style="text-align:center">
+                    <h1 class="main-title wow fadeInLeft"> 
+                        Profile information
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+
+    <!-- ========= Profile Section Start -->
+    <section class="user-setting-section" style="background: 111;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-5">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                              <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div> 
+                                <span>
+                                    Account
+                                </span>
+                                <div class="t-icon">
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus"></i>
+                                </div>
+                              </button>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul class="links">
+                                    <li>
+                                        <a class="active" href="#">Account Info</a>
+                                    </li>
+                                    <li>
+                                        <a href="/">Log out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <img src="static/images/h-it-w/malan.gif" alt="">
+                </div>
+                <div class="col-xl-8 col-md-7 ">
+                    <div class="page-title">
+                        Account Info
+                    </div>
+                    
+                    <div class="input-info-box mt-30">
+                        <div class="header">
+                            Personal Info
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="my-input-box">
+                                        <label for="">Name:</label>
+                                        <input value = {{name}} disabled/> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-input-box">
+                                        <label for="">Email:</label>
+                                        <input value = {{email}} disabled/> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-info-box mt-30">
+                        <div class="header">
+                            More Info
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="my-input-box">
+                                        <label for="">Class Year</label>
+                                        <input value = {{class_year}} disabled/> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-input-box">
+                                        <label for="">Residential College:</label>
+                                        <input value = {{resco}} disabled/> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-input-box">
+                                        <label for="">Bio</label>
+                                        <input value = {{bio}} disabled/> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-input-box">
+                                        <label for="">Major</label>
+                                        <input value = {{major}} disabled/> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons  mt-30">
+                        <a href="/" class="custom-button2">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= Profile Section Start -->
+
+
+
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/modernizr-3.6.0.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/heandline.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/countdown.min.js"></script>
+    <script src="static/js/odometer.min.js"></script>
+    <script src="static/js/viewport.jquery.js"></script>
+    <script src="static/js/nice-select.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

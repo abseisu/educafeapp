@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="static/stylesheets/all.min.css">
+    <link rel="stylesheet" href="static/stylesheets/animate.css">
+    <link rel="stylesheet" href="static/stylesheets/flaticon.css">
+    <link rel="stylesheet" href="static/stylesheets/magnific-popup.css">
+    <link rel="stylesheet" href="static/stylesheets/odometer.css">
+    <link rel="stylesheet" href="static/stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/stylesheets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/stylesheets/nice-select.css">
+    <link rel="stylesheet" href="static/stylesheets/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="static/stylesheets/main.css">
+    <link rel="stylesheet" href="static/stylesheets/responsive.css">
+    <!-- <link rel="stylesheet" href="assets/css/dark.css"> -->
+
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+
+    <title>EduCafé - Roundtables With Your Professors</title>
+
+    <style>
+        .registered {
+            background-color: #D43F8F;
+        }
+        a {
+            color: #001128;
+        }
+        .single-community-box .box-footer .right {
+            background: white;
+        }
+        .single-community-box .box-footer .right {
+            margin: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+    <header class="header-section" style="background-color: #001128">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <a href="/swipes">
+                            <img src="/static/images/logo/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li>
+                            <a href="/swipes">New EduMeets</a>
+                        </li>
+                        <li>
+                            <a href="/all_edumeets">All EduMeets</a>
+                        </li>
+                        <li>
+                            <a href="/my_edumeets" class="active">My EduMeets</a>
+                        </li>
+                        <li class="separator">
+                            <span>|</span>
+                        </li>
+                        <li class="user-profile">
+                            <a href="#">
+                                <img src="/static/images/user-demo.png" alt="">
+                            </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="/student_profile">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- ==========Header-Section========== -->
+
+    <!-- ==========Community-Section========== -->
+    <section class="community-section inner-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="top-filter">
+                        <!-- <div class="left">
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+                                <i class="fas fa-sliders-h"></i>  Filter your search
+                            </a>
+                        </div> -->
+                        <div class="right">
+                            <h1>My EduMeets</h1>
+                            <!-- <span class="span">
+                                Order By : 
+                            </span>
+                            <div class="filter-right">
+                                <select class="nice-select select-bar">
+                                    <option value="">Latest Posted</option> 
+                                    <option value="">OLD</option>
+                                    <option value="">POPULAR</option>
+                                </select>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for i in range(my_edumeets | length) %}
+                <div class="col-lg-4 col-md-6">
+                    <a disabled>
+                        <div class="single-community-box">
+                            <div class="img">
+                                <img src= {{ my_profs_photos[i] }} alt="" width="auto" height="width">
+                            </div>
+                            <div class="content">
+                                <p class="title">
+                                    With Professor {{ my_profs[i] }}
+                                </p>
+                                <p class="date">
+                                Location: {{ my_edumeets[my_edumeets_result[i]][2] }}
+                                </p>
+                                <p class="text">
+                                    Date: {{ my_edumeets[my_edumeets_result[i]][3] }}
+                                </p>
+                                <br>
+                                <p class="text">
+                                    Topic: {{ my_edumeets[my_edumeets_result[i]][4] }}
+                                </p>
+                            </div>
+                            <div class="registered">
+                                <div class="box-footer">
+                                    <div class="right">You are registered! <i class="fa-solid fa-check"></i> 
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    <a>  
+                </div>
+                {% endfor %}
+            </div>
+
+    <script src="static//js/jquery-3.3.1.min.js"></script>
+    <script src="static//js/modernizr-3.6.0.min.js"></script>
+    <script src="static//js/plugins.js"></script>
+    <script src="static//js/bootstrap.min.js"></script>
+    <script src="static//js/heandline.js"></script>
+    <script src="static//js/isotope.pkgd.min.js"></script>
+    <script src="static//js/magnific-popup.min.js"></script>
+    <script src="static//js/owl.carousel.min.js"></script>
+    <script src="static//js/wow.min.js"></script>
+    <script src="static//js/countdown.min.js"></script>
+    <script src="static//js/odometer.min.js"></script>
+    <script src="static//js/viewport.jquery.js"></script>
+    <script src="static//js/nice-select.js"></script>
+    <script src="static//js/main.js"></script>
+</body>
+
+</html>

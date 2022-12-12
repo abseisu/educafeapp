@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="static/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="static/stylesheets/all.min.css">
+  <link rel="stylesheet" href="static/stylesheets/animate.css">
+  <link rel="stylesheet" href="static/stylesheets/flaticon.css">
+  <link rel="stylesheet" href="static/stylesheets/magnific-popup.css">
+  <link rel="stylesheet" href="static/stylesheets/odometer.css">
+  <link rel="stylesheet" href="static/stylesheets/owl.carousel.min.css">
+  <link rel="stylesheet" href="static/stylesheets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="static/stylesheets/nice-select.css">
+  <link rel="stylesheet" href="static/stylesheets/jquery.animatedheadline.css">
+  <link rel="stylesheet" href="static/stylesheets/main.css">
+  <link rel="stylesheet" href="static/stylesheets/responsive.css">
+  <link rel="stylesheet" href="statics/stylesheets/dark.css">
+
+  <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+
+  <title>EduCafé - Register</title>
+
+
+</head>
+
+  <body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-icon">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ==========Preloader========== -->
+
+
+
+    <!-- ========== Login & Registation Section ========== -->
+    <section class="log-reg">
+      <div class="top-menu-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <a href="/" class="backto-home"><i class="fas fa-chevron-left"></i> Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="image">
+          </div>
+          <div class="col-lg-12">
+            <div class="log-reg-inner">
+              <div class="section-header">
+                <h2 class="title">
+                  Hi Professor, Welcome to EduCafé
+                </h2>
+                <p>
+                  Let's create your profile! Just fill in the fields below, and
+                  we’ll get you a new account.
+                </p>
+              </div>
+              <div class="main-content">
+                <form action="/prof_register" method="POST">
+                  <h4 class="content-title">Account Details</h4>
+                  <div class="form-group">
+                    <label for="">Username*</label>
+                    <input required name = "username" type="text" class="my-form-control" placeholder="Enter Your Username" id="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Yale Email Address*</label>
+                    <input name = "email" type="email" class="my-form-control" value = {{ yale_email }} placeholder="Enter Your Email" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Password*</label>
+                    <input required name = "password" type="text" class="my-form-control" placeholder="Enter Your Password" id="password">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Confirm Password*</label>
+                    <input required name = "confirmation" type="text" class="my-form-control" placeholder="Enter Your Password" id="confirmation">
+                  </div>
+                  <h4 class="content-title mt-5">Profile Details</h4>
+                  <div class="form-group">
+                    <label for="">Name*</label>
+                    <input required name = "fullname" type="text" class="my-form-control" placeholder="Enter Your Full Name" id="fullname">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Field of Research*</label>
+                    <input required name = "research_field" type="text" class="my-form-control" placeholder="Enter Your Field of Research And/Or Your Department" id="research_field">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Biography*</label>
+                    <input required name = "bio" id = "bio" type="text" id = "bio" class="my-form-control" placeholder="What you want your students to know about you!">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Profile Photo*</label>
+                    <br>
+                    <video class = "profile-photo" id="player" autoplay></video>
+                    <br>
+                    <button type = "button" class = "custom-button-2" id="capture">Capture</button>
+                    <canvas name = "canvas" class = "profile-photo" id="canvas" width="200" height="150"></canvas>
+                    <p>OR</p>
+                    <input required name = "profile" type="text" class="my-form-control" placeholder="Copy and paste the image address of your profile photo" id="profile">
+                  </div>
+                  <button type = "submit" class="custom-button" data-toggle="modal" data-target="#email-confirm">Create Your
+                    Profile</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Login & Registation Section ========== -->
+    <!-- Modal
+    <div class="modal fade" id="email-confirm" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="top-img">
+              <img src="static/images/c-image.png" alt="">
+            </div>
+            <div class="main-content">
+              <h4 class="title">
+                Check Your Inbox, Please!
+              </h4>
+              <p>
+                A link to verify account has been sent to the email supplied. Please open the link and follow the prompts
+                to verify
+                email.
+              </p>
+              <p class="send-again">
+                Didn't get e-mail? <a href="#">
+                  Send it again
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/modernizr-3.6.0.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/heandline.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/countdown.min.js"></script>
+    <script src="static/js/odometer.min.js"></script>
+    <script src="static/js/viewport.jquery.js"></script>
+    <script src="static/js/nice-select.js"></script>
+    <script src="static/js/main.js"></script>
+    <script>
+      const player = document.getElementById('player');
+      const canv = document.getElementById('canvas');
+      const context = canv.getContext('2d');
+      const captureButton = document.getElementById('capture');
+
+      const constraints = {
+        video: true,
+      };
+
+      captureButton.addEventListener('click', () => {
+        // Draw the video frame to the canvas.
+        context.drawImage(player, 0, 0, canvas.width, canvas.height);
+        captureButton.style.display = "none";
+        player.style.display = "none";
+      });
+
+      // Attach the video stream to the video element and autoplay.
+      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        player.srcObject = stream;
+      });
+    </script>
+    <script>
+      const canvas = document.getElementById('canvas')
+      var img    = new Image();
+      img.src = canvas.toDataURL(); 
+      document.body.appendChild(img);
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="static/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="static/stylesheets/all.min.css">
+  <link rel="stylesheet" href="static/stylesheets/animate.css">
+  <link rel="stylesheet" href="static/stylesheets/flaticon.css">
+  <link rel="stylesheet" href="static/stylesheets/magnific-popup.css">
+  <link rel="stylesheet" href="static/stylesheets/odometer.css">
+  <link rel="stylesheet" href="static/stylesheets/owl.carousel.min.css">
+  <link rel="stylesheet" href="static/stylesheets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="static/stylesheets/nice-select.css">
+  <link rel="stylesheet" href="static/stylesheets/jquery.animatedheadline.css">
+  <link rel="stylesheet" href="static/stylesheets/main.css">
+  <link rel="stylesheet" href="static/stylesheets/responsive.css">
+  <link rel="stylesheet" href="statics/stylesheets/dark.css">
+
+  <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+
+  <title>EduCafé - Register</title>
+
+
+</head>
+
+  <body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-icon">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ==========Preloader========== -->
+
+
+
+    <!-- ========== Login & Registation Section ========== -->
+    <section class="log-reg">
+      <div class="top-menu-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <a href="/" class="backto-home"><i class="fas fa-chevron-left"></i> Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="image">
+          </div>
+          <div class="col-lg-12">
+            <div class="log-reg-inner">
+              <div class="section-header">
+                <h2 class="title">
+                  Hey Bulldogs, Welcome to EduCafé
+                </h2>
+                <p>
+                  Let's create your profile! Just fill in the fields below, and
+                  we’ll get you a new account.
+                </p>
+              </div>
+              <div class="main-content">
+                <form action="/student_register" method="POST">
+                  <h4 class="content-title">Account Details</h4>
+                  <div class="form-group">
+                    <label for="">Username*</label>
+                    <input name = "username" type="text" class="my-form-control" placeholder="Enter Your Username" id="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Yale Email Address*</label>
+                    <input name = "email" type="email" class="my-form-control" value = {{ yale_email }} placeholder="Enter Your Email" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Password*</label>
+                    <input required name = "password" type="text" class="my-form-control" placeholder="Enter Your Password" id="password">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Confirm Password*</label>
+                    <input required name = "confirmation" type="text" class="my-form-control" placeholder="Enter Your Password" id="confirmation">
+                  </div>
+                  <h4 class="content-title mt-5">Profile Details</h4>
+                  <div class="form-group">
+                    <label for="">Name*</label>
+                    <input required name = "fullname" type="text" class="my-form-control" placeholder="Enter Your Full Name" id="fullname">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Class Year*</label>
+                    <div class="option">
+                      <div class="s-input nice-select-wraper">
+                        <select name = "classyear" id = "classyear" class="select-bar" placeholder = "Select College" border-radius="40px">
+                          <option name = "classyear" id = "classyear" selected disabled hidden>Class Year</option>
+                          <option value="2023">2023</option>
+                          <option value="2024">2024</option>
+                          <option value="2025">2025</option>
+                          <option value="2026">2026</option>
+                        </select>
+                      </div>
+                    </div>            
+                  </div>
+                  <div class="form-group">
+                    <label for="">(Prospective/Declared) Major*</label>
+                    <input required name = "major" type="text" class="my-form-control" placeholder="Enter Your Prospective/Declared Major" id="major">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Residential College*</label>
+                    <div class="option">
+                      <div class="s-input nice-select-wraper">
+                        <select name = "resco" id = "resco" class="select-bar" placeholder = "Select College">
+                          <option selected disabled hidden>Residential College</option>
+                          <option value="BF">Benjamin Franklin</option>
+                          <option value="Be">Berkeley</option>
+                          <option value="Br">Branford</option>
+                          <option value="D">Davenport</option>
+                          <option value="ES">Ezra Stiles</option>
+                          <option value="GH">Grace Hopper</option>
+                          <option value="JE">Jonathan Edwards</option>
+                          <option value="M">Morse</option>
+                          <option value="MY">Pauli Murray</option>
+                          <option value="P">Pierson</option>
+                          <option value="Sa">Saybrook</option>
+                          <option value="Si">Silliman</option>
+                          <option value="TD">Timothy Dwight</option>
+                          <option value="Tr">Trumbull</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Biography*</label>
+                    <input required name = "bio" id = "bio" type="text" id = "bio" class="my-form-control" placeholder="A short description of your interests, hobbies, and anything else you would like your EduMeets hosts to know.">
+                  </div>
+                  <button type = "submit" class="custom-button" data-toggle="modal" data-target="#email-confirm">Create Your
+                    Profile</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Login & Registation Section ========== -->
+
+    <!-- Modal 
+    <div class="modal fade" id="email-confirm" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="top-img">
+              <img src="assets/images/c-image.png" alt="">
+            </div>
+            <div class="main-content">
+              <h4 class="title">
+                Check Your Inbox, Please!
+              </h4>
+              <p>
+                A link to verify account has been sent to the email supplied. Please open the link and follow the prompts
+                to verify
+                email.
+              </p>
+              <p class="send-again">
+                Didn't get e-mail? <a href="#">
+                  Send it again
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/modernizr-3.6.0.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/heandline.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/countdown.min.js"></script>
+    <script src="static/js/odometer.min.js"></script>
+    <script src="static/js/viewport.jquery.js"></script>
+    <script src="static/js/nice-select.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+
+</html>
