@@ -3,7 +3,9 @@
 
 https://www.youtube.com/watch?v=ttBWi5Qs_wQ
 
-EduCafe
+the app idea was conceived at HackHarvard 2022
+
+EduCafe 
 
 Welcome to EduCafé! We are so excited to be able to guide you through our mission of making university campuses more social and intellectually vibrant!.
 
